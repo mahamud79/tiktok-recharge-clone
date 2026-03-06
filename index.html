@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TikTok Coin Recharge Clone</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="app-container">
+    <div id="main-screen" class="screen">
+        <div class="scroll-content">
+            <div class="header">
+                <span class="back-arrow">〈</span>
+                <span class="title">Get Coins</span>
+                <span class="dots">•••</span>
+            </div>
+
+            <div class="profile-section">
+                <div class="tk-logo-container">
+                    <div class="tk-logo-inner">
+                        <svg class="tk-svg" viewBox="0 0 448 512"><path d="M448,209.91a210.06,210.06,0,0,1-122.77-39.25V349.38A162.55,162.55,0,1,1,185,188.31V278.2a74.62,74.62,0,1,0,52.23,71.18V0l88,0a121.18,121.18,0,0,0,1.86,22.17h0A122.18,122.18,0,0,0,448,109.45Z"/></svg>
+                    </div>
+                </div>
+                <div class="profile-text">
+                    <strong class="recharge-text">Recharge</strong>
+                    <p class="balance-line">
+                        <i class="fas fa-coins gold"></i> 5,003,500
+                    </p>
+                </div>
+            </div>
+
+            <div class="input-container">
+                <input type="text" id="username" placeholder="Enter username" autocomplete="off">
+            </div>
+
+            <div class="recharge-box">
+                <p class="section-label">Recharge</p>
+                <p class="promo-text">Save around 25% with a lower third-party service fee <i class="far fa-question-circle"></i></p>
+                
+                <div class="coin-grid">
+                    <div class="coin-card" data-coins="30" data-price="0.30">
+                        <i class="fas fa-coins gold icon-margin"></i>
+                        <span class="amt">30</span>
+                        <span class="price">$0.30</span>
+                    </div>
+                    <div class="coin-card" data-coins="350" data-price="3.50">
+                        <i class="fas fa-coins gold icon-margin"></i>
+                        <span class="amt">350</span>
+                        <span class="price">$3.50</span>
+                    </div>
+                    <div class="coin-card" data-coins="1,400" data-price="14.00">
+                        <i class="fas fa-coins gold icon-margin"></i>
+                        <span class="amt">1,400</span>
+                        <span class="price">$14.00</span>
+                    </div>
+                    <div class="coin-card" data-coins="3,500" data-price="35.00">
+                        <i class="fas fa-coins gold icon-margin"></i>
+                        <span class="amt">3,500</span>
+                        <span class="price">$35.00</span>
+                    </div>
+                    <div class="coin-card" id="custom-card">
+                        <span id="custom-label">Custom</span>
+                        <input type="number" id="custom-input" class="hidden-input" placeholder="0">
+                    </div>
+                </div>
+            </div>
+
+            <div class="banner-item">
+                <div class="banner-icon gift">🎁</div>
+                <div class="banner-text">
+                    <strong>Invite & Get Rewards</strong>
+                    <p>Check out this new feature!</p>
+                </div>
+                <span class="arrow-small">〉</span>
+            </div>
+
+            <div class="banner-item">
+                <div class="banner-icon phone">📱</div>
+                <div class="banner-text">
+                    <p>Add this page to the mobile desktop for easy access with just one click</p>
+                </div>
+            </div>
+            
+            <div style="height: 150px;"></div> 
+        </div>
+
+        <div class="payment-footer">
+            <div class="special-line">
+                <span class="gray-text">Special offer</span>
+                <span class="cashback">Unlock 5% cash back 〉</span>
+            </div>
+            <div class="method-icons">
+                <span class="v-blue">VISA</span>
+                <span class="mc-red">••</span>
+                <span class="g-pay"><span class="g-blue">G</span> Pay</span>
+            </div>
+            <button id="buy-btn" disabled>Buy</button>
+        </div>
+    </div>
+
+    <div id="loading-screen" class="screen full-center hidden">
+        <div class="spinner"></div>
+        <h2 class="status-title">Processing your payment</h2>
+        <p class="status-desc">This could take a few seconds</p>
+    </div>
+
+    <div id="success-screen" class="screen full-center hidden">
+        <div class="success-circle">
+            <i class="fas fa-check"></i>
+        </div>
+        <h2 class="status-title">Successful recharge!</h2>
+        <p id="success-detail" class="detail-text"></p>
+        <p class="processed-text">This operation has been completed. It will be processed within 24 hours!</p>
+        <button class="back-btn" id="final-go-back">Go back</button>
+    </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
